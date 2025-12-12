@@ -30,7 +30,7 @@ jobs:
       - uses: stCarolas/setup-maven@v5
         with:
           maven-version: ${{ matrix.maven }}
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-jdk-${{ matrix.java }}-maven-${{ hashFiles('**/pom.xml') }}
